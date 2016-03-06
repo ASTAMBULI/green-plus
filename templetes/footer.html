@@ -1,10 +1,26 @@
  <!-- Footer -->
-<footer>
-	<div class="text-center">
-		<ul class="footer nav">
-			<li><a href="#">Privacy policy</a></li> |
-			<li><a href="#">Terms of use</a></li> |
-			<li><a href="#">Support</a></li> 
+<footer class="container text-center">
+	<div class="footer">
+		<ul class="">
+			<li><a href="#"  data-toggle="modal" data-target="#privacy">Privacy policy</a></li> |
+			<li><a href="#"   data-toggle="modal" data-target="#terms">Terms of use</a></li> |
+			<li><a href="#"  data-toggle="modal" data-target="#support">Support</a></li> 
 		</ul>
+
 	</div>
+	<p>&copy; 2016 Green Plus, Inc. </p>
+<!-- Privacy Modal -->
+<div id="privacy" class="modal fade" role="dialog">
+ <div ng-include="'templetes/privacy.html'"></div>
+</div>
+<!-- Terms Modal -->
+<div id="terms" class="modal fade" role="dialog">
+ <div ng-include="'templetes/terms.html'"></div>
+</div>
+<!-- Terms Modal -->
+<div id="support" class="modal fade" role="dialog">
+ <div ng-include="'templetes/support.html'"></div>
+</div>
 </footer>
+
+
