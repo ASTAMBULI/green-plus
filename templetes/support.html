@@ -1,0 +1,23 @@
+ <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center">Terms of use</h4>
+      </div>
+      <div class="modal-body">
+        <form name="my form" ng-submit="support()" >
+           <input id="subject"  type="text"  placeholder="Subject" ng-model="subject" class="form-control" required autofocus>
+           
+           <input id="details"  type="details"  placeholder="Details" ng-model="details" class="form-control" required>
+                       
+           <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">Send</button>
+    </form> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>

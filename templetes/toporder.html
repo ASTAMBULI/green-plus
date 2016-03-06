@@ -1,0 +1,20 @@
+<div ng-controller="TopSalesOrder">
+<table class="table table-striped  table-hover">
+    <thead>
+      <tr>
+        <th>Oder No.</th>
+        <th>Username</th>
+        <th>Value</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="value in data">
+        <td><b>{{value.orderNum}}<b></td>
+        <td>{{value.userName}}</td>
+        <td>{{value.value}}</td>
+        <td>{{value.qty}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,263 @@
+/**
+*
+*
+**/
+/*------Main Colors-----*/
+@color_1: #3d7a00; 
+@color_2: #57af00;
+@bodybg : #efefef;
+@graysh : #b3b3b3;
+/*------borders-----*/
+@input-border: 1px solid @color_1;
+@nav-border: 1px solid @color_2;
+/*------Font-----*/
+@font-face {
+    font-family: cabin;
+    src: url('../font/Cabin-Regular.otf');
+}
+ @font-family: cabin,Verdana, Geneva, sans-serif;
+@h4: 25px;
+@bodyFont: 16px;
+
+/*------Padding-----*/
+@headerPad: 15px;
+@linkPad: 2px;
+@footerPad: 10px;
+
+
+/*------Border Radius-----*/
+/*-Input Border Radius-*/
+@norad : 0px;
+@rad : 5px;
+.radius(@topl,@topr,@bottoml,@bottomr) {
+  -webkit-border-top-left-radius: @topl;
+  -webkit-border-top-right-radius: @topr;
+  -webkit-border-bottom-right-radius: @bottomr;
+  -webkit-border-bottom-left-radius: @bottoml;
+
+  -moz-border-radius-topleft: @topl;
+  -moz-border-radius-topright: @topr;
+  -moz-border-radius-bottomright: @bottomr;
+  -moz-border-radius-bottomleft: @bottoml;
+
+  border-top-left-radius: @topl;
+  border-top-right-radius: @topr;
+  border-bottom-right-radius: @bottomr;
+  border-bottom-left-radius: @bottoml;
+}
+
+/*--------------Body--------------------*/
+body{
+	height:100%;
+	font-family: @font-family;
+	font-size: @bodyFont;
+	background-color: @bodybg;
+}
+
+/*--------------Header------------------*/
+header{
+
+			 
+	.navbar-inverse {
+		border: @nav-border;
+	}
+	nav{
+		
+		
+
+		div{
+			background-color: @color_1;
+			button[type=submit]{
+			background-color: @color_2;
+			} 
+			button[type=submit]:hover{
+			background-color: @color_1;
+			} 
+			input[type=text]{
+			.radius(@rad,@rad,@rad,@rad);
+			.input-common();
+ 				}
+			ul{
+			padding: 0px @headerPad;
+
+			}
+		}
+	}
+	
+}
+
+/*-------Toggle------*/
+.navbar-bg(@bgcolor){
+	border-color: transparent;
+	background-color: @bgcolor;
+	float : left;
+}
+.navbar-inverse .navbar-toggle {
+			.navbar-bg(@color_1);
+			} 
+.navbar-inverse .navbar-toggle:hover, 
+.navbar-inverse .navbar-toggle:focus {
+			.navbar-bg(@color_2);
+			} 
+
+/*--------- link------------ */
+.navbar-inverse .navbar-nav > li > a {
+    color: @bodybg;
+}
+
+/*---------Drop down---------*/
+.navbar-inverse .navbar-nav > .dropdown > a:hover ,
+.navbar-inverset .navbar-nav > .dropdown > a:focus {
+
+    background-color: @color_1;
+
+}
+.navbar-inverse .navbar-nav > .open > a , 
+.navbar-inverse .navbar-nav > .open > a:hover , 
+.navbar-inverse .navbar-nav > .open > a:focus  {
+  background-color: @color_2;
+}
+
+	.navbar-inverse .navbar-nav .open .dropdown-menu {
+        background-color: @color_2;
+    }
+ .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: #fff;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: @color_2;
+    }
+
+/*---------------Login form---------------*/
+.input-common(){
+
+ 	color: @color_1;
+ 	border: @input-border;
+ }
+ .login{
+ 	 padding-top: 15%;
+
+	 h1,h2,h3{
+	 		color: @color_1;
+	 	}
+
+ 	span{
+
+	 	h2{
+	 		color: @graysh;
+	 	}
+
+	 	h4{
+		 	vertical-align: bottom;
+		 	font-style: italic;
+		 	font-weight:bold;
+		 	color: @color_2;
+		 	font-size: @h4;
+	 	}
+
+	 	h2,img,h4{
+	 		display: inline;
+	 	}
+ 	}
+
+ 	input[type=password]{
+		.radius(@norad,@norad,@norad,@norad);
+		.input-common();
+		 border-top:0px;
+	}
+
+	input[type=text]{
+		.radius(@rad,@rad,@norad,@norad);
+		.input-common();
+ 	}
+
+ 	button{
+	 	.radius(@norad,@norad,@rad,@rad);
+	 	 background-color: @color_1;
+
+ 	}
+
+ 	button:hover{
+ 		background-color:@color_2;
+ 	}
+
+ 	p{
+ 		color: @color_2;
+ 	}
+ }
+ 
+ /*---------------Board------------------*/
+ .jumbotron{
+ 	background-color: @color_2;
+ 	color: @bodybg;
+ 	padding: 5px 15px;
+ }
+ .nav-pills > li> a{
+ 	color: @color_2;
+ }
+ .nav-pills > li> a:hover,
+  .nav-pills > li> a:focus{
+ 	color: @color_1;
+ 	text-decoration: underline;
+ }
+ .vnav h2{
+ 	color: @color_1;
+ }
+ .charts{
+ 	background-color: #fff;
+ 	.radius(@rad,@rad,@rad,@rad);
+ 	height:50%;
+ 	width: 90%;
+ 	padding: 5%;
+ 	margin-bottom:2%;
+
+ }
+ .table{
+ 	thead{
+ 	color:@color_1;
+ 	}
+ 	tbody{
+ 	color:@color_2;
+ 	}
+ 	
+ }
+/*---------------Footer------------------*/
+
+footer{
+	div{
+		
+		color:@color_2;
+	
+	}
+	
+	li{
+		display:inline;
+		padding:@linkPad @linkPad @norad @norad;
+
+		a{
+			color:@color_2;
+		}
+		a:hover {
+			color:@color_1;
+		}
+	}
+	p{
+		color: @graysh;
+	}
+}
+/*--------------Modal------------*/
+.modal-content{
+	color: @color_2;
+	background-color: @bodyBg;
+	.modal-header{
+		background-color: @bodyBg;
+
+	}
+	.modal-body{
+		background-color: @bodyBg;
+	}
+	.modal-footer{
+		background-color: @bodyBg;
+	}
+}
