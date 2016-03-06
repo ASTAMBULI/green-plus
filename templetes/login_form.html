@@ -1,20 +1,18 @@
-<form>
-						<div class="form-group">
-                            
-                            <div class="col-md-12">
-                                <input id="username"  type="text"  placeholder="Username" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            
-                            <div class="col-md-12">
-                                <input id="password"  type="password"  placeholder="Password" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                            <div class="col-md-12 text-center">
-                                <button type="submit" class="btn btn-success btn-block">Login</button>
-                            </div>
-                        </div>
-
-</form>	
+ <!--Login form-->
+ <div class="text-center login" ng-controller='loginCtrl'>
+ 	<span><h2>Welcome to</h2>
+ 		<img class="img-responsive" alt="Green+ logo"  src="graphics/green_plus_logo.png"><h4>Sales Manager..</h4> 
+ 	</span>
+ 	 <div class="col-sm-6 col-md-4 col-md-offset-4 ">
+ 		<h3 >Please Sign in</h3>
+			<form name="my form" ng-submit="login()" >
+	           <input id="username"  type="text"  placeholder="Username" ng-model="username" class="form-control" required autofocus>
+	           
+	           <input id="password"  type="password"  placeholder="Password" ng-model="password" class="form-control" required>
+	                       
+	           <button type="submit" class="btn btn-success btn-block">Sign in</button>
+			</form>	
+			<p ng-show="failed" class=""><i ng-show="loading" class="fa fa-spinner fa-spin"></i><i ng-show="success" class="fa fa-check"></i> {{info}}</p>
+			<div ng-hide="failed" class="text-danger"><i class="fa fa-close"></i> {{info}}</div>
+	</div>
+</div>

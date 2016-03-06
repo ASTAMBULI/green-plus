@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="sales">
 	<head>
-      <meta charset="utf-8">
+      <meta charset="utf-8" >
       <title>Green Plus</title>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,22 +13,26 @@
 	   
 	    <!-- Custom Fonts -->
 	    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+        <!-- Charts CSS-->
+        <link href="css/angular-chart.min.css" type="text/css" rel="stylesheet" >
 	    <!-- Custom CSS -->
 	    <link href="css/style.css"  type="text/css" rel="stylesheet">
 	    
 	    <!-- Favicon -->
-		<link href="graphics/green_plus_favicon.png" type="image/x-icon"   rel="shortcut icon">
-
-	</head>
-	<body ng-app="">
-		<div ng-include="'templetes/header.html'"></div>
+        <link rel="icon" type="image/png" sizes="36x36" href="graphics/favicon.png">
        
-		<section class="container-fluid" >
-            <div class="row" ng-include="'templetes/login_form.html'"></div>
+        
+	</head>
+	<body >
+		
+		<section class="container" >
+             <div  ui-view> </div>
+
 		</section>
-        <div ng-include="'templetes/footer.html'"></div>
+         <div ng-include="'templetes/footer.html'"></div>
+    
 	</body>
+    
 	<!-- jQuery -->
     <script src="js/jquery.js"></script>
     
@@ -37,4 +41,17 @@
 
     <!-- Angular Js-->
     <script src="js/angular.min.js"></script>
+    <!-- Angular-ui-router Js-->
+    <script src="js/angular-ui-router.min.js"></script>
+    <!-- Chart Js-->
+    <script src="js/Chart.min.js"></script>
+    <!-- Angular Chart Js -->
+    <script src="js/angular-chart.min.js"></script>
+    <!-- application -->
+    <script src="js/app/application.js"></script>
+    <script src="js/app/login.js"></script>
+    <script src="js/app/home.js"></script>
+     <script src="js/app/chartCrtl.js"></script>
+
+
 </html>
