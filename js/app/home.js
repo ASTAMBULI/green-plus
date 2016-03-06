@@ -7,7 +7,7 @@ application.controller('homeCtrl', ['$rootScope','$scope','$location','$http',fu
 
     $scope.logout = function() {
 
- $rootScope.info="Successfully loged Out";
+ $rootScope.info="Successfully logged Out.";
  $rootScope.user =  "";
   $rootScope.sessionid =  "";
    $rootScope.loggedIn =  false;
